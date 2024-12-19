@@ -13,6 +13,5 @@ public class Slot : MonoBehaviour, IDropHandler
             Drag draggableItem = dropped.GetComponent<Drag>();
             draggableItem.parentAfterDrag = transform;
         }
-       
     }
 }
