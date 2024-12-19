@@ -177,7 +177,7 @@ MonoBehaviour:
   - {fileID: 300538095}
   - {fileID: 399210481}
   - {fileID: 929873279}
-  testTube: {fileID: 762145356694955006, guid: 5606b1968501ab04da22aad48fa98023, type: 3}
+  testTube: {fileID: 3294781658330917992, guid: 4e9aed12417a4574f8d1b276b9ff6d1f, type: 3}
 --- !u!4 &438415183
 Transform:
   m_ObjectHideFlags: 0
