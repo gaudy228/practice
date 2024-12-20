@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TubeSO 1
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Poison
+  <id>k__BackingField: 3
   <Color>k__BackingField: {r: 0.2509804, g: 0.99215686, b: 0.078431375, a: 1}
   <Damage>k__BackingField: 2
   <Period>k__BackingField: 1

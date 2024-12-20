@@ -27,7 +27,7 @@ public class ManagerEnemySlot : MonoBehaviour
                 foreach (var tubeSO in tubeSOs)
                 {
                     var testTubeSO = tubeSOs[Random.Range(0, tubeSOs.Length)];
-                    tube.SetupTube(testTubeSO.Name, testTubeSO.Color, testTubeSO.Damage, testTubeSO.Period);
+                    tube.SetupTube(testTubeSO.Name, testTubeSO.id, testTubeSO.Color, testTubeSO.Damage, testTubeSO.Period);
                 }
             }
         }
