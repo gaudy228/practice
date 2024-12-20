@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
 
@@ -14,19 +15,10 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private Image healthBar;
 
-<<<<<<< Updated upstream
-=======
-    [SerializeField] private Transform healthBarRoot;
-
->>>>>>> Stashed changes
     [SerializeField] private TextMeshProUGUI showAmountOfHp;
 
     private void Start()
     {
-<<<<<<< Updated upstream
-=======
-        Instantiate(healthBar, healthBarRoot); // If requires to be instantiated
->>>>>>> Stashed changes
         currHealth = maxHealth;
         showAmountOfHp.text = $"{currHealth.ToString()} / {maxHealth.ToString()}";
     }
@@ -37,13 +29,18 @@ public class Enemy : MonoBehaviour
         currHealth -= damage;
         if (currHealth < 0)
         {
-            //Next Enemy
+            //Game Over
         }
+        Debug.Log(currHealth);
+        Debug.Log(maxHealth);
 
         healthBarFillAmount = (float)currHealth / (float)maxHealth;
 
+        Debug.Log(healthBarFillAmount);
+
         healthBar.fillAmount = healthBarFillAmount;
 
-        showAmountOfHp.text = $"{currHealth.ToString()} / {maxHealth.ToString()}";
+        showAmountOfHp.text = $"{ currHealth.ToString() } / { maxHealth.ToString() }";
     }
+
 }
