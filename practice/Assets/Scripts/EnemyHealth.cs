@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
 
@@ -20,10 +20,8 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-
-        Instantiate(healthBar, healthBarRoot); // If requires to be instantiated
         currHealth = maxHealth;
-        showAmountOfHp.text = $"{currHealth.ToString()} / {maxHealth.ToString()}";
+        showAmountOfHp.text = $"{currHealth} / {maxHealth}";
     }
 
 
@@ -39,6 +37,6 @@ public class Enemy : MonoBehaviour
 
         healthBar.fillAmount = healthBarFillAmount;
 
-        showAmountOfHp.text = $"{currHealth.ToString()} / {maxHealth.ToString()}";
+        showAmountOfHp.text = $"{currHealth}  /  {maxHealth}";
     }
 }

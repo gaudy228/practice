@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         currHealth = maxHealth;
-        showAmountOfHp.text = $"{currHealth.ToString()} / {maxHealth.ToString()}";
+        showAmountOfHp.text = $"{currHealth} / {maxHealth}";
     }
 
 
@@ -31,16 +31,12 @@ public class PlayerHealth : MonoBehaviour
         {
             //Game Over
         }
-        Debug.Log(currHealth);
-        Debug.Log(maxHealth);
 
         healthBarFillAmount = (float)currHealth / (float)maxHealth;
 
-        Debug.Log(healthBarFillAmount);
-
         healthBar.fillAmount = healthBarFillAmount;
 
-        showAmountOfHp.text = $"{ currHealth.ToString() } / { maxHealth.ToString() }";
+        showAmountOfHp.text = $"{ currHealth} / { maxHealth}";
     }
 
 }
