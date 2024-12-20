@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
 
-    private int currHealth;
+    public int currHealth;
 
     private float healthBarFillAmount;
 
