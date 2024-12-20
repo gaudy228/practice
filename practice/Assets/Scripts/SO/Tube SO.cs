@@ -9,6 +9,9 @@ public class TubeSO : ScriptableObject
     public string Name { get; private set; }
 
     [field: SerializeField]
+    public int id { get; private set; }
+
+    [field: SerializeField]
     public Color Color { get; private set; }
 
     [field: SerializeField]

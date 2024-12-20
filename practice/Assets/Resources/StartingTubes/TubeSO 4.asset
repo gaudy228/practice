@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bdf5ea83908e7043838895e72c52151, type: 3}
-  m_Name: TubeSO
+  m_Name: TubeSO 4
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Earth
-  <id>k__BackingField: 1
-  <Color>k__BackingField: {r: 0.14509805, g: 0.7058824, b: 0.2784314, a: 1}
-  <Damage>k__BackingField: 5
+  <Name>k__BackingField: ExtLava
+  <id>k__BackingField: 4
+  <Color>k__BackingField: {r: 0.29411766, g: 0.07058824, b: 0.07058824, a: 1}
+  <Damage>k__BackingField: 3
   <Period>k__BackingField: 0

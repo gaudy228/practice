@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bdf5ea83908e7043838895e72c52151, type: 3}
   m_Name: TubeSO 2
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: ExtLava
-  <Color>k__BackingField: {r: 0.29411766, g: 0.07058824, b: 0.07058824, a: 1}
-  <Damage>k__BackingField: 3
-  <Period>k__BackingField: 0
+  <Name>k__BackingField: Poison
+  <id>k__BackingField: 3
+  <Color>k__BackingField: {r: 0.2509804, g: 0.99215686, b: 0.078431375, a: 1}
+  <Damage>k__BackingField: 2
+  <Period>k__BackingField: 1
