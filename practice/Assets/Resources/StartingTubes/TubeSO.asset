@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bdf5ea83908e7043838895e72c52151, type: 3}
   m_Name: TubeSO
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Earth
+  <Name>k__BackingField: Poison
   <id>k__BackingField: 1
-  <Color>k__BackingField: {r: 0.14509805, g: 0.7058824, b: 0.2784314, a: 1}
-  <Damage>k__BackingField: 5
-  <Period>k__BackingField: 0
+  <Color>k__BackingField: {r: 0.2509804, g: 0.99215686, b: 0.078431375, a: 1}
+  <Damage>k__BackingField: 2
+  <Period>k__BackingField: 1

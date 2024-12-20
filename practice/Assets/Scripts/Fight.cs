@@ -45,18 +45,34 @@ public class Fight : MonoBehaviour
 
 
         if (idPlayer == 1 && idEnemy == 2 ||
+            idPlayer == 1 && idEnemy == 4 ||
             idPlayer == 2 && idEnemy == 3 ||
+            idPlayer == 2 && idEnemy == 4 ||
             idPlayer == 3 && idEnemy == 4 ||
-            idPlayer == 4 && idEnemy == 1)
+            idPlayer == 3 && idEnemy == 5 ||
+            idPlayer == 4 && idEnemy == 3 ||
+            idPlayer == 4 && idEnemy == 3 ||
+            idPlayer == 5 && idEnemy == 3 ||
+            idPlayer == 5 && idEnemy == 4 ||
+            idPlayer == 6 && idEnemy == 2 ||
+            idPlayer == 6 && idEnemy == 5)
         {
-            enemy.Hp -= damagePlayer;
+            enemy.TakeDamage(damagePlayer);
         }
-        else if(idEnemy == 1 && idPlayer == 2 ||
-                idEnemy == 2 && idPlayer == 3 ||
-                idEnemy == 3 && idPlayer == 4 ||
-                idEnemy == 4 && idPlayer == 1)
+        else if(idEnemy == 1 && idPlayer == 3 ||
+                idEnemy == 1 && idPlayer == 6 ||
+                idEnemy == 2 && idPlayer == 2 ||
+                idEnemy == 2 && idPlayer == 5 ||
+                idEnemy == 3 && idPlayer == 1 ||
+                idEnemy == 3 && idPlayer == 2 ||
+                idEnemy == 4 && idPlayer == 1 ||
+                idEnemy == 4 && idPlayer == 2 ||
+                idEnemy == 5 && idPlayer == 3 ||
+                idEnemy == 5 && idPlayer == 4 ||
+                idEnemy == 6 && idPlayer == 2 ||
+                idEnemy == 6 && idPlayer == 5)
         {
-            player.Hp -= damageEnemy;
+            player.TakeDamage(damageEnemy);
         }
         else
         {
