@@ -8,7 +8,7 @@ public class Fight : MonoBehaviour
     [SerializeField] private GameObject mainSlot;
     [SerializeField] private GameObject mainEnemySlot;
     private ManagerEnemySlot managerEnemySlot;
-    private Player player;
+    private PlayerHealth player;
     private Enemy enemy;
 
     public int idPlayer;
@@ -21,7 +21,7 @@ public class Fight : MonoBehaviour
     {
        
         managerEnemySlot = GetComponent<ManagerEnemySlot>();
-        player = GetComponent<Player>();
+        player = GetComponent<PlayerHealth>();
         enemy = GetComponent<Enemy>();
     }
 
