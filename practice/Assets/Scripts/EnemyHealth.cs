@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
 
-    public int currHealth;
+    private int currHealth;
 
     private float healthBarFillAmount;
 
