@@ -14,19 +14,14 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private Image healthBar;
 
-<<<<<<< Updated upstream
-=======
     [SerializeField] private Transform healthBarRoot;
 
->>>>>>> Stashed changes
     [SerializeField] private TextMeshProUGUI showAmountOfHp;
 
     private void Start()
     {
-<<<<<<< Updated upstream
-=======
+
         Instantiate(healthBar, healthBarRoot); // If requires to be instantiated
->>>>>>> Stashed changes
         currHealth = maxHealth;
         showAmountOfHp.text = $"{currHealth.ToString()} / {maxHealth.ToString()}";
     }
