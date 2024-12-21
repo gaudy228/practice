@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: ExtLava
   <id>k__BackingField: 4
-  <Color>k__BackingField: {r: 0.29411766, g: 0.07058824, b: 0.07058824, a: 1}
+  <Color>k__BackingField: {r: 1, g: 0.0990566, b: 0.0990566, a: 1}
   <Damage>k__BackingField: 3
   <Period>k__BackingField: 0

@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private int maxHealth;
+    [SerializeField] private float maxHealth;
 
-    public int currHealth;
+    public float currHealth;
 
     private float healthBarFillAmount;
 
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
             //Game Over
         }
 
-        healthBarFillAmount = (float)currHealth / (float)maxHealth;
+        healthBarFillAmount = currHealth / maxHealth;
 
         healthBar.fillAmount = healthBarFillAmount;
 

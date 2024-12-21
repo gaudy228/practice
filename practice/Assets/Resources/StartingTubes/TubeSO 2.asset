@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Earth
   <id>k__BackingField: 3
-  <Color>k__BackingField: {r: 0.14509805, g: 0.7058824, b: 0.2784314, a: 1}
-  <Damage>k__BackingField: 5
+  <Color>k__BackingField: {r: 0.9433962, g: 0.45609728, b: 0.013349922, a: 1}
+  <Damage>k__BackingField: 4
   <Period>k__BackingField: 0

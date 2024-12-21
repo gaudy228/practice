@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private int maxHealth;
+    [SerializeField] private float maxHealth;
 
-    public int currHealth;
+    public float currHealth;
 
-    private float healthBarFillAmount;
+    
 
     [SerializeField] private Image healthBar;
 
@@ -31,9 +31,9 @@ public class Enemy : MonoBehaviour
             //Next Enemy
         }
 
-        healthBarFillAmount = (float)currHealth / (float)maxHealth;
+        
 
-        healthBar.fillAmount = healthBarFillAmount;
+        healthBar.fillAmount = currHealth / maxHealth;
 
         showAmountOfHp.text = $"{currHealth} / {maxHealth}";
     }

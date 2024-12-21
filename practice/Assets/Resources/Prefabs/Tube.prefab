@@ -92,6 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tubeName: 
   damage: 0
+  id: 0
   period: 0
 --- !u!114 &6562608860531306912
 MonoBehaviour:
