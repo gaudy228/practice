@@ -9,12 +9,13 @@ public class ManagerEnemySlot : MonoBehaviour
     public GameObject testTube;
     private TubeSO[] tubeSOs;
 
+    [SerializeField] private int maxRangeSpawnTestTube;
     private void Start()
     {
         LoadResources();
         ReRool();
     }
-    private void ReRool()
+    public void ReRool()
     {
         for (int i = 0; i < EnemySlot.Length; i++)
         {
@@ -26,7 +27,7 @@ public class ManagerEnemySlot : MonoBehaviour
                 Tube tube = instance.GetComponent<Tube>(); //SO Setup
                 foreach (var tubeSO in tubeSOs)
                 {
-                    var testTubeSO = tubeSOs[Random.Range(0, tubeSOs.Length)];
+                    var testTubeSO = tubeSOs[Random.Range(0, maxRangeSpawnTestTube)];
                     tube.SetupTube(testTubeSO.Name, testTubeSO.id, testTubeSO.Color, testTubeSO.Damage, testTubeSO.Period);
                 }
             }

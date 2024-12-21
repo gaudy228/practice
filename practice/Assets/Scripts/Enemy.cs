@@ -4,17 +4,15 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHealth : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
-    [SerializeField] private int maxHealth;
+    [SerializeField] private float maxHealth;
 
-    public int currHealth;
+    public float currHealth;
 
-    private float healthBarFillAmount;
+    
 
     [SerializeField] private Image healthBar;
-
-    [SerializeField] private Transform healthBarRoot;
 
     [SerializeField] private TextMeshProUGUI showAmountOfHp;
 
@@ -33,10 +31,10 @@ public class EnemyHealth : MonoBehaviour
             //Next Enemy
         }
 
-        healthBarFillAmount = (float)currHealth / (float)maxHealth;
+        
 
-        healthBar.fillAmount = healthBarFillAmount;
+        healthBar.fillAmount = currHealth / maxHealth;
 
-        showAmountOfHp.text = $"{currHealth}  /  {maxHealth}";
+        showAmountOfHp.text = $"{currHealth} / {maxHealth}";
     }
 }

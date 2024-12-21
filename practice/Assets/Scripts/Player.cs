@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    [SerializeField] private int maxHealth;
+    [SerializeField] private float maxHealth;
 
-    public int currHealth;
+    public float currHealth;
 
     private float healthBarFillAmount;
 
@@ -20,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         currHealth = maxHealth;
-        showAmountOfHp.text = $"{currHealth} / {maxHealth}";
+        showAmountOfHp.text = $"{currHealth}  /  {maxHealth}";
     }
 
 
@@ -32,11 +31,12 @@ public class PlayerHealth : MonoBehaviour
             //Game Over
         }
 
-        healthBarFillAmount = (float)currHealth / (float)maxHealth;
+        healthBarFillAmount = currHealth / maxHealth;
 
         healthBar.fillAmount = healthBarFillAmount;
 
-        showAmountOfHp.text = $"{ currHealth} / { maxHealth}";
+        showAmountOfHp.text = $"{currHealth} / {maxHealth}";
     }
+
 
 }
