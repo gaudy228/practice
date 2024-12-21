@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class MainSlot : MonoBehaviour
 {
-    private bool isPlay = false;
+    
     [SerializeField] private ManagerTestTube managerTestTube;
+    [SerializeField] private GameObject buttonGoPlay;
     private void Update()
     {
-        if (isPlay)
+        if(transform.childCount > 0)
         {
-            
-            
-            isPlay = false;
+            buttonGoPlay.SetActive(true);
+        }
+        else
+        {
+            buttonGoPlay.SetActive(false);
         }
     }
     public void GoPlay()
     {
-        isPlay = true;
+        
         
         managerTestTube.ReRool();
         ClearChildren();
