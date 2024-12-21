@@ -19,7 +19,7 @@ public class Fight : MonoBehaviour
     private int damageEnemy;
     private int rnd;
 
-    [SerializeField] private int countTestTubeEnemy;
+    [HideInInspector] public int countTestTubeEnemy;
     [SerializeField] private TextMeshProUGUI countTestTubeEnemyText;
 
     private void Start()
@@ -28,9 +28,12 @@ public class Fight : MonoBehaviour
         managerEnemySlot = GetComponent<ManagerEnemySlot>();
         player = GetComponent<Player>();
         enemy = GetComponent<Enemy>();
+        
+    }
+    private void Update()
+    {
         countTestTubeEnemyText.text = countTestTubeEnemy.ToString();
     }
-
     public void GoPlayFight()
     {
         ClearChildren();
@@ -103,7 +106,7 @@ public class Fight : MonoBehaviour
         }
         else
         {
-            Debug.Log("0");
+            
             Zeroing();
         }
 

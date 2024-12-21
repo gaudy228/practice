@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
 
-    public float currHealth;
+    [HideInInspector] public float currHealth;
 
     private float healthBarFillAmount;
 

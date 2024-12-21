@@ -1,29 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PauseGame : MonoBehaviour
 {
-    [SerializeField] private Button pauseButton;
-    [SerializeField] private Button unPauseButton;
-
     [SerializeField] private Image pausePanel;
-
+    [SerializeField] private GameObject buttonPause;
     private bool isPaused = false;
-
-    private void Start()
-    {
-        pauseButton.onClick.AddListener(Pause);
-        unPauseButton.onClick.AddListener(UnPause);
-    }
-
     private void Update()
     {
         EscapePressed();
     }
-
     private void EscapePressed()
     {
         if (isPaused && Input.GetKeyDown(KeyCode.Escape))
@@ -35,16 +22,17 @@ public class PauseGame : MonoBehaviour
             Pause();
         }
     }
-
-    private void Pause()
+    public void Pause()
     {
         pausePanel.gameObject.SetActive(true);
+        buttonPause.gameObject.SetActive(false);
         isPaused = true;
         Time.timeScale = 0f;
     }
-    private void UnPause()
+    public void UnPause()
     {
         pausePanel.gameObject.SetActive(false);
+        buttonPause.gameObject.SetActive(true);
         isPaused = false;
         Time.timeScale = 1f;
     }

@@ -9,9 +9,19 @@ public class ManagerEnemySlot : MonoBehaviour
     public GameObject testTube;
     private TubeSO[] tubeSOs;
 
-    [SerializeField] private int maxRangeSpawnTestTube;
+    [HideInInspector] public int maxRangeSpawnTestTube;
+    private void Awake()
+    {
+        maxRangeSpawnTestTube = PlayerPrefs.GetInt("MES");
+        
+    }
     private void Start()
     {
+        if (maxRangeSpawnTestTube == 0)
+        {
+            maxRangeSpawnTestTube = 3;
+        }
+        
         LoadResources();
         ReRool();
     }

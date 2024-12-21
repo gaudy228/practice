@@ -13,9 +13,19 @@ public class ManagerTestTube : MonoBehaviour
 
 
     private TubeSO[] tubeSOs;
-    [SerializeField] private int maxRangeSpawnTestTube;
+    [HideInInspector] public int maxRangeSpawnTestTube;
+    private void Awake()
+    {
+        maxRangeSpawnTestTube = PlayerPrefs.GetInt("MPS");
+        
+    }
     private void Start()
     {
+        if (maxRangeSpawnTestTube == 0)
+        {
+            maxRangeSpawnTestTube = 3;
+        }
+       
         LoadResources();
         moveTestTube = GameObject.FindGameObjectWithTag("ManagerUI").GetComponent<ManagerTestTube>();
         ReRool();
