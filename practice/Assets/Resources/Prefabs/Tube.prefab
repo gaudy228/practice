@@ -108,6 +108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
+  tubeInHandsClip: {fileID: 8300000, guid: 2a337fd8d11d3a5438858ba041046f0e, type: 3}
+  soundFXManager: {fileID: 0}
 --- !u!1 &6204057105770393251
 GameObject:
   m_ObjectHideFlags: 0
