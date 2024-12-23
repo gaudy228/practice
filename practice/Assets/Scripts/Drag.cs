@@ -14,7 +14,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        SoundFXManager.instance.PlaySoundFXClip(tubeInHandsClip, transform, 1f);
+        //SoundFXManager.instance.PlaySoundFXClip(tubeInHandsClip, transform, 1f);
         parentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
