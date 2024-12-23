@@ -132,13 +132,16 @@ GameObject:
   m_Component:
   - component: {fileID: 1386298835}
   - component: {fileID: 1386298836}
+  - component: {fileID: 1386298837}
+  - component: {fileID: 1386298838}
+  - component: {fileID: 1386298839}
   m_Layer: 0
-  m_Name: SoundFXManager
+  m_Name: SoundCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1386298835
 Transform:
   m_ObjectHideFlags: 0
@@ -148,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 1386298834}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -441, y: -172, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -167,6 +170,128 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundFXPlayer: {fileID: 1850542851351083133, guid: 039cfe283b5957842ac5c0a70eb553a9, type: 3}
+--- !u!82 &1386298837
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386298834}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -2621506295700752477, guid: 03a80e804cf4c1845a8da1c662edad31, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 542fb5c2b43440a4bb6a0840fb892f45, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1386298838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386298834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7f232cc0dfce547b4fef7284d8de1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMixer: {fileID: 24100000, guid: 03a80e804cf4c1845a8da1c662edad31, type: 2}
+--- !u!114 &1386298839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386298834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e69592806c4b614ba557712c9a2c49f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSource: {fileID: 1386298837}
 --- !u!222 &25427677224794759
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -337,6 +462,7 @@ GameObject:
   - component: {fileID: 4083612972554108376}
   - component: {fileID: 9080238523861832672}
   - component: {fileID: 2046959592492059391}
+  - component: {fileID: 9080238523861832673}
   m_Layer: 0
   m_Name: Manager
   m_TagString: ManagerUI
@@ -667,7 +793,7 @@ GameObject:
   - component: {fileID: 5875244987708671322}
   - component: {fileID: 3973637881974864220}
   m_Layer: 5
-  m_Name: MainVolumeSlider
+  m_Name: MasterVolumeSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1467,6 +1593,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   managerEnemySlot: {fileID: 1807104281459402753}
   managerTestTube: {fileID: 2280442387522047656}
+  masterAudioSlider: {fileID: 0}
+  musicAudioSlider: {fileID: 0}
+  SFXAudioSlider: {fileID: 0}
 --- !u!114 &2057603711272336651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2013,7 +2142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2969023683961449714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2199,13 +2328,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 3971412251304018584}
   m_HandleRect: {fileID: 6140874671317734815}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1386298838}
+        m_TargetAssemblyTypeName: SetSoundsVolume, Assembly-CSharp
+        m_MethodName: SetSoundFXVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &3153887125265910296
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2750,13 +2891,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 5394214476989707674}
   m_HandleRect: {fileID: 5497118106534125234}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1386298838}
+        m_TargetAssemblyTypeName: SetSoundsVolume, Assembly-CSharp
+        m_MethodName: SetMasterVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4027743615424794187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2801,6 +2954,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 2286165195152816514}
   buttonPause: {fileID: 8027568240437994306}
+  pauseClip: {fileID: 8300000, guid: 7b7d21a68fbf470478bc461fda0cf2cc, type: 3}
+  unPauseClip: {fileID: 8300000, guid: 3dfb6122ee1b7f74abf8bb1a09459af7, type: 3}
 --- !u!222 &4092971633459422400
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3024,6 +3179,7 @@ MonoBehaviour:
   mainEnemySlot: {fileID: 4803489120746505662}
   countTestTubeEnemy: 5
   countTestTubeEnemyText: {fileID: 7712691549819288837}
+  drawClip: {fileID: 8300000, guid: 962d13b540ecdbf4db1c1d3f9fb2f303, type: 3}
 --- !u!222 &4634424710136430277
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4151,6 +4307,9 @@ MonoBehaviour:
   showAmountOfHp: {fileID: 6110119083729553243}
   map: {fileID: 9138319562537415821}
   save: {fileID: 2046959592492059391}
+  musicSource: {fileID: 1386298837}
+  takeDamageClip: {fileID: 8300000, guid: 5237065def0860844ac9b29047462a70, type: 3}
+  enemyDefeatedClip: {fileID: 8300000, guid: 64ec308a65d5ec34c9660679275a0127, type: 3}
 --- !u!224 &6688113174095846800
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4701,13 +4860,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 9179758020076128911}
   m_HandleRect: {fileID: 3959650269208154199}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1386298838}
+        m_TargetAssemblyTypeName: SetSoundsVolume, Assembly-CSharp
+        m_MethodName: SetMusicVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7456205675885728745
 GameObject:
   m_ObjectHideFlags: 0
@@ -5508,6 +5679,7 @@ MonoBehaviour:
   currHealth: 0
   healthBar: {fileID: 7005976198398081862}
   showAmountOfHp: {fileID: 7731979886210049913}
+  takeDamageClip: {fileID: 8300000, guid: 5403fcda33d7ff243a188e6859b975bf, type: 3}
 --- !u!222 &8347846555282427955
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6264,6 +6436,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ccb47976fb18064c916d8d87e625fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9080238523861832673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184755474845702608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8524fb2901acbf241a3bd5ca3b6b7c06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterAudioSlider: {fileID: 3973637881974864220}
+  musicAudioSlider: {fileID: 7453058625415213381}
+  SFXAudioslider: {fileID: 3102367145965240418}
 --- !u!224 &9082313028897140080
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6303,6 +6490,7 @@ MonoBehaviour:
   managerEnemySlot: {fileID: 1807104281459402753}
   fight: {fileID: 4612614729683471038}
   lastFight: 0
+  locationChosenClip: {fileID: 8300000, guid: c9e5521eaaddf9b459e6776cbdb29957, type: 3}
 --- !u!224 &9179758020076128911
 RectTransform:
   m_ObjectHideFlags: 0

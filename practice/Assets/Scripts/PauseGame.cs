@@ -7,6 +7,9 @@ public class PauseGame : MonoBehaviour
     [SerializeField] private Image pausePanel;
     [SerializeField] private GameObject buttonPause;
     private bool isPaused = false;
+
+    [SerializeField] private AudioClip pauseClip;
+    [SerializeField] private AudioClip unPauseClip;
     private void Update()
     {
         EscapePressed();
@@ -27,6 +30,7 @@ public class PauseGame : MonoBehaviour
         pausePanel.gameObject.SetActive(true);
         buttonPause.gameObject.SetActive(false);
         isPaused = true;
+        SoundFXManager.SFXinstance.PlaySoundFXClip(pauseClip, transform, 0.1f);
         Time.timeScale = 0f;
     }
     public void UnPause()
@@ -34,6 +38,7 @@ public class PauseGame : MonoBehaviour
         pausePanel.gameObject.SetActive(false);
         buttonPause.gameObject.SetActive(true);
         isPaused = false;
+        SoundFXManager.SFXinstance.PlaySoundFXClip(unPauseClip, transform, 0.1f);
         Time.timeScale = 1f;
     }
 }

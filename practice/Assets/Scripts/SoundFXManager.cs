@@ -3,15 +3,15 @@ using UnityEngine;
 
 public class SoundFXManager : MonoBehaviour
 {
-    public static SoundFXManager instance;
+    public static SoundFXManager SFXinstance;
 
     [SerializeField] private AudioSource soundFXPlayer;
 
     private void Awake()
     {
-        if (instance == null)
+        if (SFXinstance == null)
         {
-            instance = this;
+            SFXinstance = this;
         }
     }
 
@@ -25,6 +25,8 @@ public class SoundFXManager : MonoBehaviour
 
         //Assign the volume
         audioSource.volume = volume;
+
+        audioSource.Play();
 
         //Get float value of how much time the clip is playing
         float clipLength = audioSource.clip.length;

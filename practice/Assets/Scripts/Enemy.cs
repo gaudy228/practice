@@ -21,6 +21,10 @@ public class Enemy : MonoBehaviour
     private ManagerEnemySlot managerEnemySlot;
     private ManagerTestTube managerTestTube;
     [SerializeField] private Save save;
+
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private AudioClip takeDamageClip;
+    [SerializeField] private AudioClip enemyDefeatedClip;
     private void Awake()
     {
         nextLocation = PlayerPrefs.GetInt("nextLocation");
@@ -46,6 +50,8 @@ public class Enemy : MonoBehaviour
         currHealth -= damage;
         if(currHealth <= 0 && map.lastFight)
         {
+            ContinuePlayingMusicOnStop.sourceInstance.TimeOnStop(musicSource.time);
+
             map.lastFight = false;
             nextLocation++;
             managerEnemySlot.maxRangeSpawnTestTube++;
@@ -61,9 +67,10 @@ public class Enemy : MonoBehaviour
             Time.timeScale = 0f;
             maxHealth ++;
             currHealth = maxHealth;
+            SoundFXManager.SFXinstance.PlaySoundFXClip(enemyDefeatedClip, transform, 0.1f);
         }
+        SoundFXManager.SFXinstance.PlaySoundFXClip(takeDamageClip, transform, 0.1f);
 
-        
 
         healthBar.fillAmount = currHealth / maxHealth;
 

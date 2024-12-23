@@ -22,6 +22,7 @@ public class Fight : MonoBehaviour
     [HideInInspector] public int countTestTubeEnemy;
     [SerializeField] private TextMeshProUGUI countTestTubeEnemyText;
 
+    [SerializeField] private AudioClip drawClip;
     private void Start()
     {
        
@@ -106,7 +107,7 @@ public class Fight : MonoBehaviour
         }
         else
         {
-            
+            SoundFXManager.SFXinstance.PlaySoundFXClip(drawClip, transform, 0.1f);
             Zeroing();
         }
 

@@ -12,6 +12,8 @@ public class Map : MonoBehaviour
     [SerializeField] private Fight fight;
     private int maxCountTubeEnemy = -1;
     [HideInInspector] public bool lastFight = false;
+
+    [SerializeField] private AudioClip locationChosenClip;
     private void Start()
     {
         
@@ -27,7 +29,7 @@ public class Map : MonoBehaviour
         maxCountTubeEnemy++;
         fight.countTestTubeEnemy = maxCountTubeEnemy;
         managerEnemySlot.ReRool();
-        
+        SoundFXManager.SFXinstance.PlaySoundFXClip(locationChosenClip, transform, 0.1f);
     }
     public void EnemyFinalChoice()
     {
