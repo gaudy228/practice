@@ -19,26 +19,37 @@ public class Fight : MonoBehaviour
     private int damageEnemy;
     private int rnd;
 
-    [HideInInspector] public int countTestTubeEnemy;
+    [HideInInspector] public int countTestTubeEnemy = 0;
     [SerializeField] private TextMeshProUGUI countTestTubeEnemyText;
 
     [SerializeField] private AudioClip drawClip;
+
+    [SerializeField] private Consumables consumables;
+    [SerializeField] private GameObject[] RedFrame;
     private void Start()
     {
        
         managerEnemySlot = GetComponent<ManagerEnemySlot>();
         player = GetComponent<Player>();
         enemy = GetComponent<Enemy>();
-        
+        RandomSlot();
     }
     private void Update()
     {
         countTestTubeEnemyText.text = countTestTubeEnemy.ToString();
+        if (consumables.prediction)
+        {
+            RedFrame[rnd].SetActive(true);
+            consumables.prediction = false;
+        }
     }
     public void GoPlayFight()
     {
         ClearChildren();
-        RandomSlot();
+        for (int i = 0; i < RedFrame.Length; i++)
+        {
+            RedFrame[i].SetActive(false);
+        }
         foreach (Transform child in managerEnemySlot.EnemySlot[rnd].transform)
         {
             
@@ -78,7 +89,14 @@ public class Fight : MonoBehaviour
             idPlayer == 6 && idEnemy == 5 ||
             idPlayer == 6 && idEnemy == 4)
         {
+            if (consumables.dobleDamage)
+            {
+                
+                enemy.TakeDamage(damagePlayer);
+                consumables.dobleDamage = false;
+            }
             enemy.TakeDamage(damagePlayer);
+            
             Zeroing();
         }
         else if (idEnemy == 1 && idPlayer == 3 ||
@@ -96,11 +114,21 @@ public class Fight : MonoBehaviour
                  idEnemy == 6 && idPlayer == 5 ||
                  idEnemy == 6 && idPlayer == 4)
         {
+            if (consumables.dobleDamage)
+            {
+                player.TakeDamage(damageEnemy);
+                consumables.dobleDamage = false;
+            }
             player.TakeDamage(damageEnemy);
             Zeroing();
         }
         else if (idEnemy == 0)
         {
+            if (consumables.dobleDamage)
+            {
+                enemy.TakeDamage(damagePlayer);
+                consumables.dobleDamage = false;
+            }
             enemy.TakeDamage(damagePlayer);
             
             Zeroing();
@@ -110,7 +138,7 @@ public class Fight : MonoBehaviour
             SoundFXManager.SFXinstance.PlaySoundFXClip(drawClip, transform, 0.1f);
             Zeroing();
         }
-
+        RandomSlot();
     }
     private void Zeroing()
     {

@@ -25,6 +25,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioClip takeDamageClip;
     [SerializeField] private AudioClip enemyDefeatedClip;
+
+    [SerializeField] private Consumables consumables;
     private void Awake()
     {
         nextLocation = PlayerPrefs.GetInt("nextLocation");
@@ -65,9 +67,10 @@ public class Enemy : MonoBehaviour
         {
             panelMap.SetActive(true);
             Time.timeScale = 0f;
-            maxHealth ++;
+            maxHealth++;
             currHealth = maxHealth;
             SoundFXManager.SFXinstance.PlaySoundFXClip(enemyDefeatedClip, transform, 0.1f);
+            consumables.ReRool();
         }
         SoundFXManager.SFXinstance.PlaySoundFXClip(takeDamageClip, transform, 0.1f);
 
