@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (consumables.hialing)
+        if (consumables.healing)
         {
             
             if(currHealth + plusHPCon > maxHealth)
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
             healthBarFillAmount = currHealth / maxHealth;
             healthBar.fillAmount = healthBarFillAmount;
             showAmountOfHp.text = $"{currHealth} / {maxHealth}";
-            consumables.hialing = false;
+            consumables.healing = false;
         }
     }
     public void TakeDamage(int damage)

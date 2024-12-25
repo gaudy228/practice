@@ -21,8 +21,14 @@ public class Save : MonoBehaviour
 
     public void SaveAudioSlidersValue()
     {
-        PlayerPrefs.SetFloat("MasterSlider", masterAudioSlider.value);
-        PlayerPrefs.SetFloat("MusicSlider", musicAudioSlider.value);
-        PlayerPrefs.SetFloat("SoundFXSlider", SFXAudioSlider.value);
+        //PlayerPrefs.SetFloat("MasterSlider", masterAudioSlider.value);
+        //PlayerPrefs.SetFloat("MusicSlider", musicAudioSlider.value);
+        //PlayerPrefs.SetFloat("SoundFXSlider", SFXAudioSlider.value);
+        PlayerPrefs.SetFloat("MasterSlider", 1);
+        PlayerPrefs.SetFloat("MusicSlider", 1);
+        PlayerPrefs.SetFloat("SoundFXSlider", 1);
+        Debug.Log(PlayerPrefs.GetFloat("MasterSlider"));
+        Debug.Log(PlayerPrefs.GetFloat("MusicSlider"));
+        Debug.Log(PlayerPrefs.GetFloat("SoundFXSlider"));
     }
 }

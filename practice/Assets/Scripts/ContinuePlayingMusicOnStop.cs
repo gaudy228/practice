@@ -7,19 +7,20 @@ public class ContinuePlayingMusicOnStop : MonoBehaviour
     public static ContinuePlayingMusicOnStop sourceInstance;
 
     [SerializeField] private AudioSource musicSource;
-
+    private float timeOnStop;
     private void Start()
     {
         if (sourceInstance == null)
         {
             sourceInstance = this;
         }
+        musicSource.time = timeOnStop;
         musicSource.Play();
         
     }
     public void TimeOnStop(float stopTime)
     {
-        musicSource.time = stopTime;
+        timeOnStop = stopTime;
         Debug.Log(musicSource.time);
     }
 }

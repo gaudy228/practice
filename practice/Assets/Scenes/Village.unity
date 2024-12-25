@@ -2969,7 +2969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   masterAudioSlider: {fileID: 164494392114891658}
   musicAudioSlider: {fileID: 7768623138085080124}
-  SFXAudioslider: {fileID: 443639605162745325}
+  SFXAudioSlider: {fileID: 443639605162745325}
 --- !u!114 &494780717959065716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5813,6 +5813,7 @@ MonoBehaviour:
   healthBar: {fileID: 1338604856348841945}
   showAmountOfHp: {fileID: 2589800185673169390}
   takeDamageClip: {fileID: 8300000, guid: 5403fcda33d7ff243a188e6859b975bf, type: 3}
+  healingClip: {fileID: 0}
   consumables: {fileID: 7815792530223516165}
   plusHPCon: 1
 --- !u!222 &1032128589136686252
@@ -22192,6 +22193,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 9193863361875920435}
+        m_TargetAssemblyTypeName: PlaySoundOnPress, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &4164544464652566471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31299,6 +31312,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9193863361875920435}
+        m_TargetAssemblyTypeName: PlaySoundOnPress, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &5972985705013926591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34046,6 +34071,7 @@ GameObject:
   - component: {fileID: 4239241951221551759}
   - component: {fileID: 9193863361875920434}
   - component: {fileID: 485373450669541779}
+  - component: {fileID: 9193863361875920435}
   m_Layer: 0
   m_Name: Manager
   m_TagString: ManagerUI
@@ -40924,9 +40950,12 @@ MonoBehaviour:
   - {fileID: 563780606693293720, guid: 572d7bd86c73cc949b435dd21e36825e, type: 3}
   - {fileID: 563780606693293720, guid: 2b9f4e7d6fcc2f64ebc3b7519c6666ce, type: 3}
   - {fileID: 563780606693293720, guid: 5bac55f94a2b2844581c0ebc71e71cf8, type: 3}
-  dobleDamage: 0
-  hialing: 0
+  doubleDamage: 0
+  healing: 0
   prediction: 0
+  doubleDamageClip: {fileID: 8300000, guid: 3bf193c64c71bf946910aa13c5711e3b, type: 3}
+  healingClip: {fileID: 8300000, guid: 22de7cce474ebfa429d1a3845a499bb7, type: 3}
+  predictionClip: {fileID: 8300000, guid: 77f678112536ca44d924172ed03022d2, type: 3}
 --- !u!224 &7821674633036871183
 RectTransform:
   m_ObjectHideFlags: 0
@@ -47916,9 +47945,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   managerEnemySlot: {fileID: 6581378299120003703}
   managerTestTube: {fileID: 3786328299617532839}
-  masterAudioSlider: {fileID: 0}
-  musicAudioSlider: {fileID: 0}
-  SFXAudioSlider: {fileID: 0}
+  masterAudioSlider: {fileID: 164494392114891658}
+  musicAudioSlider: {fileID: 7768623138085080124}
+  SFXAudioSlider: {fileID: 443639605162745325}
+--- !u!114 &9193863361875920435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6488738013891747966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b0f02c34256f442a6907649496d052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressButtonClip: {fileID: 8300000, guid: fb6e2dec79ca32a4fb529d199d799d42, type: 3}
 --- !u!222 &9195948898323677820
 CanvasRenderer:
   m_ObjectHideFlags: 0

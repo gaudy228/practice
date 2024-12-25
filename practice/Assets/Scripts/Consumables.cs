@@ -7,9 +7,14 @@ public class Consumables : MonoBehaviour
     [SerializeField] private GameObject[] Slot;
     [SerializeField] private GameObject[] Consumabl;
     private GameObject[] ButtonCon = new GameObject[3];
-    [HideInInspector] public bool dobleDamage = false;
-    [HideInInspector] public bool hialing = false;
+    [HideInInspector] public bool doubleDamage = false;
+    [HideInInspector] public bool healing = false;
     [HideInInspector] public bool prediction = false;
+
+    [SerializeField] private AudioClip doubleDamageClip;
+    [SerializeField] private AudioClip predictionClip;
+    [SerializeField] private AudioClip healingClip;
+
     private void Start()
     {
         ReRool();
@@ -53,18 +58,18 @@ public class Consumables : MonoBehaviour
     }
     public void DoubleDamage()
     {
-        dobleDamage = true;
-        
+        doubleDamage = true;
+        SoundFXManager.SFXinstance.PlaySoundFXClip(doubleDamageClip, transform, 0.1f);
     }
     public void Healing()
     {
-        hialing = true;
-        
+        healing = true;
+        SoundFXManager.SFXinstance.PlaySoundFXClip(healingClip, transform, 0.1f);
     }
     public void Prediction()
     {
         prediction = true;
-        
+        SoundFXManager.SFXinstance.PlaySoundFXClip(predictionClip, transform, 0.1f);
     }
     public void ButtDestroy1()
     {

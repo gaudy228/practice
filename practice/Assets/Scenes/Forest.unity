@@ -2694,6 +2694,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 8709865944985746091}
+        m_TargetAssemblyTypeName: PlaySoundOnPress, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!222 &514505655535824175
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21547,7 +21559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   masterAudioSlider: {fileID: 4393813667425064085}
   musicAudioSlider: {fileID: 6160397705557103395}
-  SFXAudioslider: {fileID: 4078448552855519986}
+  SFXAudioSlider: {fileID: 4078448552855519986}
 --- !u!114 &4040188230504752428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25174,9 +25186,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   managerEnemySlot: {fileID: 7342081489576588648}
   managerTestTube: {fileID: 736950968865514680}
-  masterAudioSlider: {fileID: 0}
-  musicAudioSlider: {fileID: 0}
-  SFXAudioSlider: {fileID: 0}
+  masterAudioSlider: {fileID: 4393813667425064085}
+  musicAudioSlider: {fileID: 6160397705557103395}
+  SFXAudioSlider: {fileID: 4078448552855519986}
 --- !u!222 &4696975455244754275
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31080,9 +31092,12 @@ MonoBehaviour:
   - {fileID: 563780606693293720, guid: 572d7bd86c73cc949b435dd21e36825e, type: 3}
   - {fileID: 563780606693293720, guid: 2b9f4e7d6fcc2f64ebc3b7519c6666ce, type: 3}
   - {fileID: 563780606693293720, guid: 5bac55f94a2b2844581c0ebc71e71cf8, type: 3}
-  dobleDamage: 0
-  hialing: 0
+  doubleDamage: 0
+  healing: 0
   prediction: 0
+  doubleDamageClip: {fileID: 8300000, guid: 3bf193c64c71bf946910aa13c5711e3b, type: 3}
+  predictionClip: {fileID: 8300000, guid: 77f678112536ca44d924172ed03022d2, type: 3}
+  healingClip: {fileID: 8300000, guid: 22de7cce474ebfa429d1a3845a499bb7, type: 3}
 --- !u!114 &5967667943884392008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37882,6 +37897,7 @@ GameObject:
   - component: {fileID: 316730402101480848}
   - component: {fileID: 4694644734721399085}
   - component: {fileID: 4039152805800154764}
+  - component: {fileID: 8709865944985746091}
   m_Layer: 0
   m_Name: Manager
   m_TagString: ManagerUI
@@ -40783,6 +40799,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8709865944985746091}
+        m_TargetAssemblyTypeName: PlaySoundOnPress, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -45431,6 +45459,19 @@ MonoBehaviour:
   - {fileID: 106196392389818664}
   - {fileID: 8370824474990769234}
   animHeroAndEnemy: {fileID: 1753384082550438654}
+--- !u!114 &8709865944985746091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7259011360031948641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b0f02c34256f442a6907649496d052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressButtonClip: {fileID: 8300000, guid: fb6e2dec79ca32a4fb529d199d799d42, type: 3}
 --- !u!224 &8710006280991643153
 RectTransform:
   m_ObjectHideFlags: 0

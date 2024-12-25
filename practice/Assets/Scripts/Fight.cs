@@ -203,11 +203,11 @@ public class Fight : MonoBehaviour
         animHeroAndEnemy.SetBool("AtP", true);
         yield return new WaitForSeconds(0.5f);
         animHeroAndEnemy.SetBool("AtP", false);
-        if (consumables.dobleDamage)
+        if (consumables.doubleDamage)
         {
             damagePlayer *= 2;
             enemy.TakeDamage(damagePlayer);
-            consumables.dobleDamage = false;
+            consumables.doubleDamage = false;
         }
         else
         {
@@ -221,11 +221,11 @@ public class Fight : MonoBehaviour
         animHeroAndEnemy.SetBool("AtE", true);
         yield return new WaitForSeconds(0.5f);
         animHeroAndEnemy.SetBool("AtE", false);
-        if (consumables.dobleDamage)
+        if (consumables.doubleDamage)
         {
             damageEnemy *= 2;
             player.TakeDamage(damageEnemy);
-            consumables.dobleDamage = false;
+            consumables.doubleDamage = false;
         }
         else
         {

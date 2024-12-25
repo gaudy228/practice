@@ -7,14 +7,17 @@ public class SetAudioSlidersValue : MonoBehaviour
 {
     [SerializeField] private Slider masterAudioSlider;
     [SerializeField] private Slider musicAudioSlider;
-    [SerializeField] private Slider SFXAudioslider;
+    [SerializeField] private Slider SFXAudioSlider;
 
 
 
     private void Start()
     {
+        Debug.Log(PlayerPrefs.GetFloat("MasterSlider"));
+        Debug.Log(PlayerPrefs.GetFloat("MusicSlider"));
+        Debug.Log(PlayerPrefs.GetFloat("SoundFXSlider"));
         masterAudioSlider.value = PlayerPrefs.GetFloat("MasterSlider");
         musicAudioSlider.value = PlayerPrefs.GetFloat("MusicSlider");
-        SFXAudioslider.value = PlayerPrefs.GetFloat("SoundFXSlider");
+        SFXAudioSlider.value = PlayerPrefs.GetFloat("SoundFXSlider");
     }
 }

@@ -9151,6 +9151,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 8906403348041504815}
+        m_TargetAssemblyTypeName: PlaySoundOnPress, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!224 &1755256052443855524
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14692,7 +14704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   masterAudioSlider: {fileID: 2584257733096584154}
   musicAudioSlider: {fileID: 5357867273518019692}
-  SFXAudioslider: {fileID: 2863543545137948093}
+  SFXAudioSlider: {fileID: 2863543545137948093}
 --- !u!114 &2825295445752054371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18194,6 +18206,7 @@ MonoBehaviour:
   healthBar: {fileID: 3676881739860635529}
   showAmountOfHp: {fileID: 172711270493995454}
   takeDamageClip: {fileID: 8300000, guid: 5403fcda33d7ff243a188e6859b975bf, type: 3}
+  healingClip: {fileID: 0}
   consumables: {fileID: 5612052024525173333}
   plusHPCon: 1
 --- !u!224 &3450450273443730768
@@ -29937,9 +29950,12 @@ MonoBehaviour:
   - {fileID: 563780606693293720, guid: 572d7bd86c73cc949b435dd21e36825e, type: 3}
   - {fileID: 563780606693293720, guid: 2b9f4e7d6fcc2f64ebc3b7519c6666ce, type: 3}
   - {fileID: 563780606693293720, guid: 5bac55f94a2b2844581c0ebc71e71cf8, type: 3}
-  dobleDamage: 0
-  hialing: 0
+  doubleDamage: 0
+  healing: 0
   prediction: 0
+  doubleDamageClip: {fileID: 8300000, guid: 3bf193c64c71bf946910aa13c5711e3b, type: 3}
+  healingClip: {fileID: 8300000, guid: 22de7cce474ebfa429d1a3845a499bb7, type: 3}
+  predictionClip: {fileID: 8300000, guid: 77f678112536ca44d924172ed03022d2, type: 3}
 --- !u!114 &5616106322151935888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35414,9 +35430,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   managerEnemySlot: {fileID: 8845217835657024039}
   managerTestTube: {fileID: 1521930764411487223}
-  masterAudioSlider: {fileID: 0}
-  musicAudioSlider: {fileID: 0}
-  SFXAudioSlider: {fileID: 0}
+  masterAudioSlider: {fileID: 2584257733096584154}
+  musicAudioSlider: {fileID: 5357867273518019692}
+  SFXAudioSlider: {fileID: 2863543545137948093}
 --- !u!222 &6776743974367410732
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43631,6 +43647,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8906403348041504815}
+        m_TargetAssemblyTypeName: PlaySoundOnPress, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &8320578336528030526
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -46587,6 +46615,7 @@ GameObject:
   - component: {fileID: 1964016287939357407}
   - component: {fileID: 6774096036515135074}
   - component: {fileID: 2821825006359163331}
+  - component: {fileID: 8906403348041504815}
   m_Layer: 0
   m_Name: Manager
   m_TagString: ManagerUI
@@ -46594,6 +46623,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8906403348041504815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8906403348041504814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b0f02c34256f442a6907649496d052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressButtonClip: {fileID: 8300000, guid: fb6e2dec79ca32a4fb529d199d799d42, type: 3}
 --- !u!222 &8906637165330332611
 CanvasRenderer:
   m_ObjectHideFlags: 0
