@@ -19,13 +19,14 @@ public class Fight : MonoBehaviour
     private int damageEnemy;
     private int rnd;
 
-    [HideInInspector] public int countTestTubeEnemy = 0;
+    public int countTestTubeEnemy = 0;
     [SerializeField] private TextMeshProUGUI countTestTubeEnemyText;
 
     [SerializeField] private AudioClip drawClip;
 
     [SerializeField] private Consumables consumables;
     [SerializeField] private GameObject[] RedFrame;
+    [SerializeField] private Animator animHeroAndEnemy;
     private void Start()
     {
        
@@ -89,15 +90,7 @@ public class Fight : MonoBehaviour
             idPlayer == 6 && idEnemy == 5 ||
             idPlayer == 6 && idEnemy == 4)
         {
-            if (consumables.dobleDamage)
-            {
-                
-                enemy.TakeDamage(damagePlayer);
-                consumables.dobleDamage = false;
-            }
-            enemy.TakeDamage(damagePlayer);
-            
-            Zeroing();
+            StartCoroutine(AttackaP());
         }
         else if (idEnemy == 1 && idPlayer == 3 ||
                  idEnemy == 1 && idPlayer == 5 ||
@@ -114,29 +107,16 @@ public class Fight : MonoBehaviour
                  idEnemy == 6 && idPlayer == 5 ||
                  idEnemy == 6 && idPlayer == 4)
         {
-            if (consumables.dobleDamage)
-            {
-                player.TakeDamage(damageEnemy);
-                consumables.dobleDamage = false;
-            }
-            player.TakeDamage(damageEnemy);
-            Zeroing();
+            StartCoroutine(AttackaE());
         }
         else if (idEnemy == 0)
         {
-            if (consumables.dobleDamage)
-            {
-                enemy.TakeDamage(damagePlayer);
-                consumables.dobleDamage = false;
-            }
-            enemy.TakeDamage(damagePlayer);
-            
-            Zeroing();
+            StartCoroutine(AttackaP());
         }
         else
         {
             SoundFXManager.SFXinstance.PlaySoundFXClip(drawClip, transform, 0.1f);
-            Zeroing();
+            StartCoroutine(AttackaN());
         }
         RandomSlot();
     }
@@ -217,5 +197,50 @@ public class Fight : MonoBehaviour
                 }
             }
         }
+    }
+    private IEnumerator AttackaP()
+    {
+        animHeroAndEnemy.SetBool("AtP", true);
+        yield return new WaitForSeconds(0.5f);
+        animHeroAndEnemy.SetBool("AtP", false);
+        if (consumables.dobleDamage)
+        {
+            damagePlayer *= 2;
+            enemy.TakeDamage(damagePlayer);
+            consumables.dobleDamage = false;
+        }
+        else
+        {
+            enemy.TakeDamage(damagePlayer);
+        }
+
+        Zeroing();
+    }
+    private IEnumerator AttackaE()
+    {
+        animHeroAndEnemy.SetBool("AtE", true);
+        yield return new WaitForSeconds(0.5f);
+        animHeroAndEnemy.SetBool("AtE", false);
+        if (consumables.dobleDamage)
+        {
+            damageEnemy *= 2;
+            player.TakeDamage(damageEnemy);
+            consumables.dobleDamage = false;
+        }
+        else
+        {
+            player.TakeDamage(damageEnemy);
+        }
+        
+        Zeroing();
+    }
+    private IEnumerator AttackaN()
+    {
+        animHeroAndEnemy.SetBool("AtN", true);
+        yield return new WaitForSeconds(0.3f);
+        animHeroAndEnemy.SetBool("AtN", false);
+        
+
+        Zeroing();
     }
 }

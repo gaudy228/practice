@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Water
   <id>k__BackingField: 6
-  <Color>k__BackingField: {r: 0.21226418, g: 0.8296785, b: 1, a: 1}
+  <Color>k__BackingField: {r: 0, g: 0.61763334, b: 1, a: 1}
   <Damage>k__BackingField: 3
   <Period>k__BackingField: 0
