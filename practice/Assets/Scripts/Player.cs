@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Consumables consumables;
     [SerializeField] private float plusHPCon;
+    [SerializeField] private GameObject GameOver;
+    [SerializeField] private GameObject ButtonPause;
     private void Start()
     {
         currHealth = maxHealth;
@@ -46,9 +48,11 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currHealth -= damage;
-        if (currHealth < 0)
+        if (currHealth <= 0)
         {
-            //Game Over
+            
+            GameOver.SetActive(true);
+            ButtonPause.SetActive(false);
         }
 
         healthBarFillAmount = currHealth / maxHealth;

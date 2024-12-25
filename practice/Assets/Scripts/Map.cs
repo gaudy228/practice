@@ -24,12 +24,12 @@ public class Map : MonoBehaviour
     {
         countWin++;
         ReButton();
-        gameObject.SetActive(false);
-        Time.timeScale = 1.0f;
+        
         maxCountTubeEnemy++;
         fight.countTestTubeEnemy = maxCountTubeEnemy;
         managerEnemySlot.ReRool();
         SoundFXManager.SFXinstance.PlaySoundFXClip(locationChosenClip, transform, 0.1f);
+        gameObject.SetActive(false);
     }
     public void EnemyFinalChoice()
     {

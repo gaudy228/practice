@@ -12,7 +12,12 @@ public class Save : MonoBehaviour
     [SerializeField] private Slider masterAudioSlider;
     [SerializeField] private Slider musicAudioSlider;
     [SerializeField] private Slider SFXAudioSlider;
-
+    private void Start()
+    {
+        masterAudioSlider.value = PlayerPrefs.GetFloat("MasterSlider");
+        musicAudioSlider.value = PlayerPrefs.GetFloat("MusicSlider");
+        SFXAudioSlider.value = PlayerPrefs.GetFloat("SoundFXSlider");
+    }
     public void SaveData()
     {
         PlayerPrefs.SetInt("MES", managerEnemySlot.maxRangeSpawnTestTube);
@@ -21,14 +26,10 @@ public class Save : MonoBehaviour
 
     public void SaveAudioSlidersValue()
     {
-        //PlayerPrefs.SetFloat("MasterSlider", masterAudioSlider.value);
-        //PlayerPrefs.SetFloat("MusicSlider", musicAudioSlider.value);
-        //PlayerPrefs.SetFloat("SoundFXSlider", SFXAudioSlider.value);
-        PlayerPrefs.SetFloat("MasterSlider", 1);
-        PlayerPrefs.SetFloat("MusicSlider", 1);
-        PlayerPrefs.SetFloat("SoundFXSlider", 1);
-        Debug.Log(PlayerPrefs.GetFloat("MasterSlider"));
-        Debug.Log(PlayerPrefs.GetFloat("MusicSlider"));
-        Debug.Log(PlayerPrefs.GetFloat("SoundFXSlider"));
+        
+        PlayerPrefs.SetFloat("MasterSlider", masterAudioSlider.value);
+        PlayerPrefs.SetFloat("MusicSlider", musicAudioSlider.value);
+        PlayerPrefs.SetFloat("SoundFXSlider", SFXAudioSlider.value);
+        
     }
 }

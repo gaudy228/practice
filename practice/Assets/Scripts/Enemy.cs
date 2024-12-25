@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private AudioClip enemyDefeatedClip;
 
     [SerializeField] private Consumables consumables;
+    [SerializeField] private Tutor tutor;
     private void Awake()
     {
         nextLocation = PlayerPrefs.GetInt("nextLocation");
@@ -63,7 +64,7 @@ public class Enemy : MonoBehaviour
             PlayerPrefs.Save();
             SceneManager.LoadScene(nextLocation);
         }
-        else if (currHealth <= 0)
+        else if (currHealth <= 0 && tutor.isTutor == 0)
         {
             panelMap.SetActive(true);
             Time.timeScale = 0f;
@@ -71,6 +72,10 @@ public class Enemy : MonoBehaviour
             currHealth = maxHealth;
             SoundFXManager.SFXinstance.PlaySoundFXClip(enemyDefeatedClip, transform, 0.1f);
             consumables.ReRool();
+        }
+        else if(currHealth <= 0 && tutor.isTutor == 1)
+        {
+            SceneManager.LoadScene(0);
         }
         SoundFXManager.SFXinstance.PlaySoundFXClip(takeDamageClip, transform, 0.1f);
 

@@ -213,7 +213,7 @@ public class Fight : MonoBehaviour
         {
             enemy.TakeDamage(damagePlayer);
         }
-
+        consumables.doubleDamage = false;
         Zeroing();
     }
     private IEnumerator AttackaE()
@@ -225,13 +225,13 @@ public class Fight : MonoBehaviour
         {
             damageEnemy *= 2;
             player.TakeDamage(damageEnemy);
-            consumables.doubleDamage = false;
+            
         }
         else
         {
             player.TakeDamage(damageEnemy);
         }
-        
+        consumables.doubleDamage = false;
         Zeroing();
     }
     private IEnumerator AttackaN()
@@ -239,8 +239,8 @@ public class Fight : MonoBehaviour
         animHeroAndEnemy.SetBool("AtN", true);
         yield return new WaitForSeconds(0.3f);
         animHeroAndEnemy.SetBool("AtN", false);
-        
 
+        consumables.doubleDamage = false;
         Zeroing();
     }
 }
