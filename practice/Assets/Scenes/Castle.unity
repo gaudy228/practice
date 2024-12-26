@@ -20002,19 +20002,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &3572422969463008469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4130224539618073357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e69592806c4b614ba557712c9a2c49f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSource: {fileID: 4043360483051844607}
 --- !u!222 &3573819004444538884
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22972,7 +22959,6 @@ GameObject:
   - component: {fileID: 3395405030677597231}
   - component: {fileID: 4043360483051844607}
   - component: {fileID: 6136071428305926747}
-  - component: {fileID: 3572422969463008469}
   m_Layer: 0
   m_Name: SoundCentre
   m_TagString: Untagged
@@ -23564,18 +23550,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &4260296267452393202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7471287814188633887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8524fb2901acbf241a3bd5ca3b6b7c06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &4266198443447307808
 RectTransform:
   m_ObjectHideFlags: 0
@@ -40531,7 +40505,6 @@ GameObject:
   - component: {fileID: 102854810919863865}
   - component: {fileID: 537943137407139310}
   - component: {fileID: 4770669295647304019}
-  - component: {fileID: 4260296267452393202}
   - component: {fileID: 8920997678690863829}
   m_Layer: 0
   m_Name: Manager

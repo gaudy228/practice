@@ -14346,7 +14346,6 @@ GameObject:
   - component: {fileID: 3686294032808074014}
   - component: {fileID: 2605993093515584718}
   - component: {fileID: 5265000927096417642}
-  - component: {fileID: 3289164596052491236}
   m_Layer: 0
   m_Name: SoundCentre
   m_TagString: Untagged
@@ -15002,18 +15001,6 @@ RectTransform:
   m_AnchoredPosition: {x: 64.362, y: 329.48}
   m_SizeDelta: {x: 70.7977, y: 86.722}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2821825006359163331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8906403348041504814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8524fb2901acbf241a3bd5ca3b6b7c06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2825295445752054371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17721,19 +17708,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3289164596052491236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2695192529459956796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e69592806c4b614ba557712c9a2c49f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSource: {fileID: 2605993093515584718}
 --- !u!1 &3290792813055799462
 GameObject:
   m_ObjectHideFlags: 0
@@ -48008,7 +47982,6 @@ GameObject:
   - component: {fileID: 2115521812646826248}
   - component: {fileID: 1964016287939357407}
   - component: {fileID: 6774096036515135074}
-  - component: {fileID: 2821825006359163331}
   - component: {fileID: 8906403348041504815}
   m_Layer: 0
   m_Name: Manager

@@ -1982,7 +1982,6 @@ GameObject:
   - component: {fileID: 1350269085222478670}
   - component: {fileID: 414083334274309278}
   - component: {fileID: 7531228052058363194}
-  - component: {fileID: 878258782364599220}
   m_Layer: 0
   m_Name: SoundCentre
   m_TagString: Untagged
@@ -2787,18 +2786,6 @@ RectTransform:
   m_AnchoredPosition: {x: -173.7, y: -144.5262}
   m_SizeDelta: {x: 14.1732, y: 80.5952}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &485373450669541779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6488738013891747966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8524fb2901acbf241a3bd5ca3b6b7c06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &498313206878511745
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4798,19 +4785,6 @@ RectTransform:
   m_AnchoredPosition: {x: -412.37, y: 505.6}
   m_SizeDelta: {x: 32.5613, y: 104.8187}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &878258782364599220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356480511938737260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e69592806c4b614ba557712c9a2c49f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSource: {fileID: 414083334274309278}
 --- !u!222 &879720957279042002
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34639,7 +34613,6 @@ GameObject:
   - component: {fileID: 4381599539999402328}
   - component: {fileID: 4239241951221551759}
   - component: {fileID: 9193863361875920434}
-  - component: {fileID: 485373450669541779}
   - component: {fileID: 9193863361875920435}
   m_Layer: 0
   m_Name: Manager

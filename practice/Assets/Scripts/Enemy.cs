@@ -53,8 +53,6 @@ public class Enemy : MonoBehaviour
         currHealth -= damage;
         if(currHealth <= 0 && map.lastFight)
         {
-            ContinuePlayingMusicOnStop.sourceInstance.TimeOnStop(musicSource.time);
-
             map.lastFight = false;
             nextLocation++;
             managerEnemySlot.maxRangeSpawnTestTube++;

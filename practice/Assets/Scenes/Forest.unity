@@ -4705,7 +4705,6 @@ GameObject:
   - component: {fileID: 7183165527579437517}
   - component: {fileID: 7653728933863050844}
   - component: {fileID: 5759402588975878895}
-  - component: {fileID: 6571673858593487527}
   m_Layer: 0
   m_Name: SoundCentre
   m_TagString: Untagged
@@ -37966,19 +37965,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834131845773960140}
   m_CullTransparentMesh: 1
---- !u!114 &6571673858593487527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 774815755009296994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e69592806c4b614ba557712c9a2c49f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSource: {fileID: 7653728933863050844}
 --- !u!222 &6580272922351971158
 CanvasRenderer:
   m_ObjectHideFlags: 0
