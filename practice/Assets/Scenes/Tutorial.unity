@@ -4111,19 +4111,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &655055138867753603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6405470455479288390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e69592806c4b614ba557712c9a2c49f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSource: {fileID: 4040852884389594744}
 --- !u!114 &671440753408540225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24557,7 +24544,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2621506295700752477, guid: 03a80e804cf4c1845a8da1c662edad31, type: 2}
   m_audioClip: {fileID: 8300000, guid: 542fb5c2b43440a4bb6a0840fb892f45, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
@@ -38165,7 +38152,6 @@ GameObject:
   - component: {fileID: 3570164140353446377}
   - component: {fileID: 4040852884389594744}
   - component: {fileID: 2146525424286538443}
-  - component: {fileID: 655055138867753603}
   m_Layer: 0
   m_Name: SoundCentre
   m_TagString: Untagged
