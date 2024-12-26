@@ -29,6 +29,7 @@ public class Map : MonoBehaviour
         fight.countTestTubeEnemy = maxCountTubeEnemy;
         managerEnemySlot.ReRool();
         SoundFXManager.SFXinstance.PlaySoundFXClip(locationChosenClip, transform, 0.1f);
+        Time.timeScale = 1;
         gameObject.SetActive(false);
     }
     public void EnemyFinalChoice()

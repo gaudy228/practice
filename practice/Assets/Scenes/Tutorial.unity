@@ -13774,6 +13774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5904971519025740047}
+  - component: {fileID: 5904971519025740048}
   m_Layer: 0
   m_Name: TheWholeScene
   m_TagString: Untagged
@@ -35251,6 +35252,21 @@ Transform:
   - {fileID: 7646135162179876678}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5904971519025740048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2245713699693848387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4083972771a397c479f9493e16413e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: {fileID: 2286907753436046421}
+  buttonRePlay: {fileID: 1508880869792259829}
+  buttonGoMenu: {fileID: 3492704297220998859}
 --- !u!114 &5909534404136860447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35311,6 +35327,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: MainSlot, Assembly-CSharp
         m_MethodName: GoPlay
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7237166277021663919}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -25710,6 +25710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 437703921858214968}
+  - component: {fileID: 4729089219336101163}
   m_Layer: 0
   m_Name: TheWholeScene
   m_TagString: Untagged
@@ -25717,6 +25718,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4729089219336101163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4729089219336101162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4083972771a397c479f9493e16413e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: {fileID: 4255120667598729543}
+  buttonRePlay: {fileID: 4518664040942486035}
+  buttonGoMenu: {fileID: 5088293498279232905}
 --- !u!222 &4741140362900557217
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43426,6 +43442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTutor: 0
+  engAndRu: {fileID: 0}
   textTut: {fileID: 7392857751728805397}
   arrowInfo: {fileID: 0}
   arrowMyTube: {fileID: 0}
@@ -49132,6 +49149,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: MainSlot, Assembly-CSharp
         m_MethodName: GoPlay
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5488999107653942813}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

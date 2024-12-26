@@ -19817,6 +19817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTutor: 0
+  engAndRu: {fileID: 0}
   textTut: {fileID: 4238488293485214949}
   arrowInfo: {fileID: 0}
   arrowMyTube: {fileID: 0}
@@ -36851,6 +36852,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7906511060082640461}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6912275355579688795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36969,6 +36982,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2848050769057088616}
+  - component: {fileID: 6932271170987369851}
   m_Layer: 0
   m_Name: TheWholeScene
   m_TagString: Untagged
@@ -36976,6 +36990,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6932271170987369851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6932271170987369850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4083972771a397c479f9493e16413e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: {fileID: 5607724795242222872}
+  buttonRePlay: {fileID: 5218017543591061068}
+  buttonGoMenu: {fileID: 3477524055130120662}
 --- !u!222 &6940079346395974600
 CanvasRenderer:
   m_ObjectHideFlags: 0

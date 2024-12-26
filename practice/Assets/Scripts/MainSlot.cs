@@ -7,6 +7,10 @@ public class MainSlot : MonoBehaviour
     
     [SerializeField] private ManagerTestTube managerTestTube;
     [SerializeField] private GameObject buttonGoPlay;
+    private void Start()
+    {
+        ClearChildren();
+    }
     private void Update()
     {
         if(transform.childCount > 0)

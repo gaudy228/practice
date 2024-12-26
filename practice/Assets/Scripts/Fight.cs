@@ -34,6 +34,7 @@ public class Fight : MonoBehaviour
         player = GetComponent<Player>();
         enemy = GetComponent<Enemy>();
         RandomSlot();
+        ClearChildren();
     }
     private void Update()
     {
